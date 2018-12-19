@@ -15,24 +15,25 @@
 		<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600" rel="stylesheet" type="text/css" />
 
 		<!-- CORE CSS -->
-		<link href="assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+		<%=  stylesheet_link_tag "bootstrap/css/bootstrap.min.css" %> 
 
 		<!-- SWIPER SLIDER -->
-		<link href="assets/plugins/slider.swiper/dist/css/swiper.min.css" rel="stylesheet" type="text/css" />
+		<%=  stylesheet_link_tag "slider.swiper/dist/css/swiper.min.css" %> 
 
 		<!-- THEME CSS -->
-		<link href="assets/css/essentials.css" rel="stylesheet" type="text/css" />
-		<link href="assets/css/layout.css" rel="stylesheet" type="text/css" />
+		<%=  stylesheet_link_tag "essentials.css" %> 
+		<%=  stylesheet_link_tag "layout.css" %> 
 
 		<!-- PAGE LEVEL SCRIPTS -->
-		<link href="assets/css/header-1.css" rel="stylesheet" type="text/css" />
-		<link href="assets/css/color_scheme/brown.css" rel="stylesheet" type="text/css" id="color_scheme" />
-		<link href="assets/css/pack-caffe.css" rel="stylesheet" type="text/css" />
-		<link href="assets/css/custom-forms-v2.css" rel="stylesheet" type="text/css" />
-		
+		<%=  stylesheet_link_tag "header-1.css" %> 
+		<%=  stylesheet_link_tag "color_scheme/brown.css" %> 
+		<%=  stylesheet_link_tag "pack-caffe.css" %> 
+		<%=  stylesheet_link_tag "custom-forms-v2.css" %> 
+
   </head>
 
   <body>
     <%= yield %>
   </body>
+	
 </html>
