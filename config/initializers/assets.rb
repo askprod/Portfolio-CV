@@ -26,3 +26,14 @@ Rails.application.config.assets.precompile += %w( scripts.js )
 Rails.application.config.assets.precompile += %w( bootstrap/js/bootstrap.min.js )
 
 Rails.application.config.assets.precompile += %w( profile.png )
+Rails.application.config.assets.precompile += %w( ruby.png )
+Rails.application.config.assets.precompile += %w( html.png )
+Rails.application.config.assets.precompile += %w( audio.png )
+Rails.application.config.assets.precompile += %w( comm.png )
+Rails.application.config.assets.precompile += %w( time.png )
+Rails.application.config.assets.precompile += %w( adapt.png )
+Rails.application.config.assets.precompile += %w( sehra.png )
+Rails.application.config.assets.precompile += %w( cats.png )
+Rails.application.config.assets.precompile += %w( starwars.png )
+
+
