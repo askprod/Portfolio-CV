@@ -41,6 +41,7 @@
 
 							<!-- MENU -->
 
+						<% if @home_navbar %>
                             <ul class="nav navbar-nav nav-onepage">
                                 <li>
                                     <a href="/">
@@ -48,6 +49,8 @@
                                     </a>
                                 </li>
                             </ul>
+
+						<% else %>
 
 							<ul class="nav navbar-nav nav-onepage">
 								<li class="active">
@@ -66,7 +69,8 @@
 									</a>
 								</li>
 							</ul>
-                            
+
+							<% end %>
 							<!-- /MENU -->
 
 						</div><!--/.nav-collapse -->
