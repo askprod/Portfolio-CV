@@ -4,14 +4,17 @@
 		<div id="wrapper">
 
 			<!-- ABOUT -->
+			<% if mobile_device? %>
 				<div class="container" id="about">
-
+			<% else %>
+				<div class="container" id="about" style="height: 100vh;">
+			<% end %>
 					<div class="row">
 						<div class="col-sm-10 offset-sm-1">
 
 							<div class="row">
-
-								<div class="" style="margin: 30px;">
+							
+								<div style="margin: 60px;">
 									
 									<header>
 										<h2 class="fs-25"><span>About Me</span></h2>									
@@ -80,7 +83,7 @@
 
 						<div class="col-md-4 col-6 mb-30 text-center">
 							<!-- Icon -->
-							<div class="piechart" data-color="#337AB7" data-trackcolor="rgba(0,0,0,0.04)" data-size="125" data-percent="75" data-width="2" data-animate="3000">
+							<div class="piechart" data-color="#337AB7" data-trackcolor="rgba(0,0,0,0.04)" data-size="125" data-percent="75" data-width="2" data-animate="20000">
 								<I><%= image_tag "ruby.png", class: "fa" %></i>
 							</div>
 							<p>Object Oriented Programming<br>Web Frameworks<br>Database Management</p>
@@ -88,7 +91,7 @@
 
 						<div class="col-md-4 col-6 mb-30 text-center">
 							<!-- Icon -->
-							<div class="piechart" data-color="#337AB7" data-trackcolor="rgba(0,0,0,0.04)" data-size="125" data-percent="85" data-width="2" data-animate="3000">
+							<div class="piechart" data-color="#337AB7" data-trackcolor="rgba(0,0,0,0.04)" data-size="125" data-percent="85" data-width="2" data-animate="20000">
 								<I><%= image_tag "html.png", class: "fa" %></i>
 							</div>
 							<p>HTML CSS JavaScript<br>Bootstrap<br>jQuery</p>
@@ -96,7 +99,7 @@
 
 						<div class="col-md-4 col-6 mb-30 text-center">
 							<!-- Icon -->
-							<div class="piechart" data-color="#337AB7" data-trackcolor="rgba(0,0,0,0.04)" data-size="125" data-percent="95" data-width="2" data-animate="3000">
+							<div class="piechart" data-color="#337AB7" data-trackcolor="rgba(0,0,0,0.04)" data-size="125" data-percent="95" data-width="2" data-animate="20000">
 								<I><%= image_tag "audio.png", class: "fa" %></i>
 							</div>
 							<p>Sound Design<br>Music Composing<br>Audio Processing<br>ProTools</p>
@@ -104,7 +107,7 @@
 
 						<div class="col-md-4 col-6 mb-30 text-center">
 							<!-- Icon -->
-							<div class="piechart" data-color="#337AB7" data-trackcolor="rgba(0,0,0,0.04)" data-size="130" data-percent="95" data-width="2" data-animate="3000">
+							<div class="piechart" data-color="#337AB7" data-trackcolor="rgba(0,0,0,0.04)" data-size="130" data-percent="95" data-width="2" data-animate="20000">
 								<I><%= image_tag "comm.png", class: "fa" %></i>
 							</div>
 							<p>Communication<br>Teamwork<br>Problem Solving</p>
@@ -112,7 +115,7 @@
 
 						<div class="col-md-4 col-6 mb-30 text-center">
 							<!-- Icon -->
-							<div class="piechart" data-color="#337AB7" data-trackcolor="rgba(0,0,0,0.04)" data-size="125" data-percent="70" data-width="2" data-animate="3000">
+							<div class="piechart" data-color="#337AB7" data-trackcolor="rgba(0,0,0,0.04)" data-size="125" data-percent="70" data-width="2" data-animate="20000">
 								<I><%= image_tag "time.png", class: "fa" %></i>
 							</div>
 							<p>Time Management<br>Working Under Pressure</p>
@@ -120,7 +123,7 @@
 
 						<div class="col-md-4 col-6 mb-30 text-center">
 							<!-- Icon -->
-							<div class="piechart" data-color="#337AB7" data-trackcolor="rgba(0,0,0,0.04)" data-size="125" data-percent="90" data-width="2" data-animate="3000">
+							<div class="piechart" data-color="#337AB7" data-trackcolor="rgba(0,0,0,0.04)" data-size="125" data-percent="90" data-width="2" data-animate="20000">
 								<I><%= image_tag "adapt.png", class: "fa" %></i>
 							</div>
 							<p>Adaptability<br>Willingness to Learn<br>New Technologies</p>
@@ -131,100 +134,6 @@
 
 				</div>
 
-			</section>
-			
-			<!-- EXPERIENCE -->
-			<section id="experience" class="parallax parallax-auto b-0" style="background: url('https://imageshack.com/a/img921/9417/XrIloZ.jpg')">
-
-
-				<div class="display-table">
-					<div class="display-table-cell vertical-align-middle">
-						
-						<div class="container text-center">
-
-							<h2 class="fw-600 mt-30 mb-3 wow fadeIn" data-wow-delay="0.5s">EXPERIENCE</h2>
-
-						</div>
-
-					</div>
-				</div>
-
-				<span class="raster overlay dark-3 z-index-0"><!-- dark|light overlay [0 to 9 opacity] --></span>
-			</section>
-
-			<section class="section-xs">
-				<div class="container">
-
-
-					<div class="row">
-						<div class="col-sm-10 offset-sm-1">
-
-							<div class="timeline"><!-- .timeline-inverse = right position -->
-
-									<!-- ITEM -->
-									<div class="timeline-item timeline-item-bordered">
-										
-										<!-- timeline entry -->
-										<div class="timeline-entry rounded"><!-- .rounded = entry -->
-											3<span>MONTHS</span>
-											<div class="timeline-vline"><!-- vertical line --></div>
-										</div>
-										<!-- /timeline entry -->
-
-										<h2 class="fs-20 mb-0"><span>The Hacking Project</span></h2>
-										<time class="block mb-20 fs-13" datetime="2017-06-02">Sept. to Dec. 2018</time>
-
-										<p>The Hacking Project is a bootcamp program over 3 months, that teaches it's student web development. We go through HTML/CSS, Javascript, Ruby, Ruby on Rails, SQL and other frameworks in a peer-to-peer learning environment.</p>
-
-										<a href="https://www.thehackingproject.org/" class="fs-14">Website</a>
-									</div>
-									<!-- /ITEM -->
-
-									<!-- ITEM -->
-									<div class="timeline-item timeline-item-bordered">
-										
-										<!-- timeline entry -->
-										<div class="timeline-entry rounded"><!-- .rounded = entry -->
-											6<span>YEARS</span>
-											<div class="timeline-vline"><!-- vertical line --></div>
-										</div>
-										<!-- /timeline entry -->
-										
-										<h2 class="fs-20 mb-0"><span>Audio Freelance</span></h2>
-										<time class="block mb-20 fs-13" datetime="2017-06-02">Since 2011</time>
-
-										<p>- Personal music project "Ask Music", composing, recording of instruments, mixing and mastering for many unique tracks, including the release of an EP, the release of a song on a English label, the featuring of a song on a main YouTube channel with millions of views, live sets in local concert rooms. 
-										<br>- Audio recording, music composing, sound design, and video synchronisation for many audio-visual projects, music clips, short films, advertisement and a mobile video game using Wwise. 
-										<br>- Mixing and mastering for several artists and labels around the globe.</p>
-
-									</div>
-									<!-- /ITEM -->
-
-									<!-- ITEM -->
-									<div class="timeline-item timeline-item-bordered">
-										
-										<!-- timeline entry -->
-										<div class="timeline-entry rounded"><!-- .rounded = entry -->
-											1<span>YEAR</span>
-											<div class="timeline-vline"><!-- vertical line --></div>
-										</div>
-										<!-- /timeline entry -->
-										
-										<h2 class="fs-20 mb-0"><span>Recording Arts Canada</span></h2>
-										<time class="block mb-20 fs-13" datetime="2017-06-02">From 2012 to 2013</time>
-
-									<p>The objectives and contents of the Sound & Music Recording program revolve around developing solid skills in digital sound production, music recording, computer-assisted sound design, electro-acoustics, MIDI, music for film and television, post-audio, and surround sound mixing and recording.</p>
-									<a href="https://recordingarts.com/" class="fs-14">Website</a>
-									</div>
-									<!-- /ITEM -->
-
-							</div>
-
-						</div>
-					</div>
-
-
-				</div>
 			</section>
 
 			<!-- PORTFOLIO -->

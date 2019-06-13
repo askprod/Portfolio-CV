@@ -35,7 +35,11 @@
 
                 <div>
 
+							<% if mobile_device? %>
+							<div style="margin: auto 20px;" class="masonry-gallery columns-2 clearfix lightbox" data-plugin-options='{"delegate": "a", "gallery": {"enabled": true}}'>
+							<% else %>
 							<div style="margin: auto 20px;" class="masonry-gallery columns-5 clearfix lightbox" data-plugin-options='{"delegate": "a", "gallery": {"enabled": true}}'>
+							<% end %>	
 
                             <% stranger_number = 1 %>
                             <% 24.times do %>
