@@ -10,10 +10,10 @@
 
 							<div class="row">
 
-								<div class="" style="margin: 30px;">
+								<div style="margin: 80px 20px; text-align: justify; text-justify: inner-word;">
 									
 									<header>									
-										<h1 class="fs-30"><span>Pictures of Strangers</span></h1>
+										<h1 class=" text-center fs-30"><span>PICTURES OF STRANGERS</span></h1>
 										<p class="fw-300">Putting myself up for this photography challenge was easy, but getting to those portraits is a different story. </p>
 										<p class="fw-300">I've always had trouble with fear of rejection, and it's surprising how much I have to fight against that fear when I have to go up to complete strangers in the street and ask them: "Can I make your portrait?"</p>
 										<p class="fw-300">This project has helped me tremendously in overcoming that unjustified fear: people are surprised that you show some interest in them, they love the interaction, and they ask how they can participate in making the picture a better portrait!</p>
@@ -35,12 +35,7 @@
 
                 <div>
 
-							<% if mobile_device? %>
-							<div style="margin: auto 20px;" class="masonry-gallery columns-2 clearfix lightbox" data-plugin-options='{"delegate": "a", "gallery": {"enabled": true}}'>
-							<% else %>
-							<div style="margin: auto 20px;" class="masonry-gallery columns-5 clearfix lightbox" data-plugin-options='{"delegate": "a", "gallery": {"enabled": true}}'>
-							<% end %>	
-
+							<div style="margin: 10px;" class="masonry-gallery columns-5 clearfix lightbox" data-plugin-options='{"delegate": "a", "gallery": {"enabled": true}}'>
                             <% stranger_number = 1 %>
                             <% 24.times do %>
 
