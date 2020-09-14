@@ -1,108 +1,89 @@
-			<!-- SIDE MENU -->
-			<div id="mainMenu" class="navbar-toggleable-md sidebar-vertical sidebar-dark">
+<div id="mainMenu" class="navbar-toggleable-md sidebar-vertical sidebar-dark">
 
-				<a href="/" class="logo text-center mb-0 mt-0 pt-15 pb-15 w-100p">
-					<!-- .logo-xs-half = resize logo on mobile (remove if logo is already small) -->
-					<%= image_tag "/images/profile-picture.png", class: "logo-xs-half", size: "200x200", alt: "" %>
-				</a>
+	<a href="/" class="logo text-center mb-0 mt-0 pt-15 pb-15 w-100p">
+		<%= image_tag "/images/profile-picture.png", class: "logo-xs-half", size: "200x200", alt: "" %>
+	</a>
 
-				<!-- Paragraph -->
-					<div class="container">
-						<h5 class="text-center mb-0 fw-300"><span>Contact:</span></h5>
-						<p class="text-center mx-auto fw-300 fs-15">
-								<br>
-								paultrindinh@gmail.com
-						</p>
-					</div>
+	<div class="container">
+		<h5 class="text-center mb-0 fw-300"><span>Contact:</span></h5>
+		<p class="text-center mx-auto fw-300 fs-15">
+				<br>
+				paultrindinh@gmail.com
+		</p>
+	</div>
 
-				<div style="margin-bottom: 20px" class="text-center mx-auto">
-					<%= link_to "English CV", englishcv_path, target: "_blank", class: "fs-15 fw-300" %>
-					|
-					<%= link_to "French CV", francaiscv_path, target: "_blank", class: "fs-15 fw-300" %>
-				</div>
+	<div style="margin-bottom: 20px" class="text-center mx-auto">
+		<%= link_to "English CV", englishcv_path, target: "_blank", class: "fs-15 fw-300" %>
+		|
+		<%= link_to "French CV", francaiscv_path, target: "_blank", class: "fs-15 fw-300" %>
+	</div>
 
-				<div class="sidebar-nav">
+	<div class="sidebar-nav">
+		<div class="navbar navbar-default" role="navigation">
 
-					<div class="navbar navbar-default" role="navigation">
-
-				<!-- /Paragraph -->						
-
-						<div class="navbar-header">
-							<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".sidebar-navbar-collapse">
-								<span class="sr-only">Toggle navigation</span>
-								<span class="icon-bar"></span>
-								<span class="icon-bar"></span>
-								<span class="icon-bar"></span>
-							</button>
-						</div>
-
-						<div class="navbar-collapse sidebar-navbar-collapse collapse w-100p">
-
-							<!-- MENU -->
-
-						<% if @home_navbar %>
-                            <ul class="nav navbar-nav nav-onepage">
-                                <li>
-                                    <a href="/">
-                                        Home
-                                    </a>
-                                </li>
-                            </ul>
-
-						<% else %>
-
-							<ul class="nav navbar-nav nav-onepage">
-								<li class="active">
-									<a href="#about">
-										About
-									</a>
-								</li>
-								<li>
-									<a href="#skills">
-										Skills
-									</a>
-								</li>
-								<li>
-									<a href="#projects">
-										Projects
-									</a>
-								</li>
-							</ul>
-
-							<% end %>
-							<!-- /MENU -->
-
-						</div><!--/.nav-collapse -->
-
-					</div>
-				</div>
-
-
-				<!-- Social Icons -->
-				<div class="social-icons hidden-md hidden-sm-down text-center">
-					<a href="https://www.linkedin.com/in/paul-trin-dinh-508537b9/" target="_blank" class="social-icon social-icon-sm social-icon-light social-linkedin" data-toggle="tooltip" data-placement="top" title="Linkedin">
-						<i class="icon-linkedin"></i>
-						<i class="icon-linkedin"></i>
-					</a>
-					<a href="https://github.com/askprod" target="_blank" class="social-icon social-icon-sm social-icon-light social" data-toggle="tooltip" data-placement="top" title="Github">
-						<i class="icon-github"></i>
-						<i class="icon-github"></i>
-					</a>
-					<a href="https://soundcloud.com/askprod" target="_blank" class="social-icon social-icon-sm social-icon-light social-soundcloud" data-toggle="tooltip" data-placement="top" title="Soundcloud">
-						<i class="icon-soundcloud"></i>
-						<i class="icon-soundcloud"></i>
-					</a>
-					<a href="https://www.instagram.com/askstreetphotography/" target="_blank" class="social-icon social-icon-sm social-icon-light social-instagram" data-toggle="tooltip" data-placement="top" title="Instagram">
-						<i class="icon-instagram"></i>
-						<i class="icon-instagram"></i>
-					</a>
-					<a href="https://stackoverflow.com/users/12296411/askprod" target="_blank" class="social-icon social-icon-sm social-icon-light social-stackoverflow" data-toggle="tooltip" data-placement="top" title="StackOverflow">
-						<i class="icon-stackoverflow"></i>
-						<i class="icon-stackoverflow"></i>
-					</a>
-				</div>
-
-				<!-- /Social Icons -->
-
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".sidebar-navbar-collapse">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
 			</div>
-			<!-- /SIDE MENU -->
+
+			<div class="navbar-collapse sidebar-navbar-collapse collapse w-100p">
+				<% if @home_navbar %>
+				<ul class="nav navbar-nav nav-onepage">
+					<li>
+						<a href="/">
+							Home
+						</a>
+					</li>
+				</ul>
+				<% else %>
+				<ul class="nav navbar-nav nav-onepage">
+					<li class="active">
+						<a href="#about">
+							About
+						</a>
+					</li>
+					<li>
+						<a href="#skills">
+							Skills
+						</a>
+					</li>
+					<li>
+						<a href="#projects">
+							Projects
+						</a>
+					</li>
+				</ul>
+				<% end %>
+			</div>
+			
+		</div>
+	</div>
+
+	<div class="social-icons hidden-md hidden-sm-down text-center">
+		<a href="https://www.linkedin.com/in/paul-trin-dinh-508537b9/" target="_blank" class="social-icon social-icon-sm social-icon-light social-linkedin" data-toggle="tooltip" data-placement="top" title="Linkedin">
+			<i class="icon-linkedin"></i>
+			<i class="icon-linkedin"></i>
+		</a>
+		<a href="https://github.com/askprod" target="_blank" class="social-icon social-icon-sm social-icon-light social" data-toggle="tooltip" data-placement="top" title="Github">
+			<i class="icon-github"></i>
+			<i class="icon-github"></i>
+		</a>
+		<a href="https://soundcloud.com/askprod" target="_blank" class="social-icon social-icon-sm social-icon-light social-soundcloud" data-toggle="tooltip" data-placement="top" title="Soundcloud">
+			<i class="icon-soundcloud"></i>
+			<i class="icon-soundcloud"></i>
+		</a>
+		<a href="https://www.instagram.com/askstreetphotography/" target="_blank" class="social-icon social-icon-sm social-icon-light social-instagram" data-toggle="tooltip" data-placement="top" title="Instagram">
+			<i class="icon-instagram"></i>
+			<i class="icon-instagram"></i>
+		</a>
+		<a href="https://stackoverflow.com/users/12296411/askprod" target="_blank" class="social-icon social-icon-sm social-icon-light social-stackoverflow" data-toggle="tooltip" data-placement="top" title="StackOverflow">
+			<i class="icon-stackoverflow"></i>
+			<i class="icon-stackoverflow"></i>
+		</a>
+	</div>
+
+</div>

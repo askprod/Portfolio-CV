@@ -1,5 +1,4 @@
 class HomeController < ApplicationController
-  
   def index
   end
 
@@ -10,5 +9,4 @@ class HomeController < ApplicationController
   def francaiscv
     send_file 'public/documents/francaiscv.pdf', type: 'application/pdf', :disposition => 'inline'
   end
-
 end
