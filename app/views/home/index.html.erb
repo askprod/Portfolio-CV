@@ -68,7 +68,7 @@
 						<div class="col-md-4 col-6 mb-30 text-center">
 							<!-- Icon -->
 							<div class="piechart" data-color="#337AB7" data-trackcolor="rgba(0,0,0,0.04)" data-size="125" data-percent="90" data-width="2" data-animate="10000">
-								<I><%= image_tag "ruby.png", class: "fa" %></i>
+								<I><%= image_tag "/images/widget_ruby.png", class: "fa" %></i>
 							</div>
 							<p>Object Oriented Programming<br>Web Frameworks<br>Database Management</p>
 						</div>
@@ -76,7 +76,7 @@
 						<div class="col-md-4 col-6 mb-30 text-center">
 							<!-- Icon -->
 							<div class="piechart" data-color="#337AB7" data-trackcolor="rgba(0,0,0,0.04)" data-size="125" data-percent="85" data-width="2" data-animate="10000">
-								<I><%= image_tag "html.png", class: "fa" %></i>
+								<I><%= image_tag "/images/widget_html.png", class: "fa" %></i>
 							</div>
 							<p>HTML CSS JavaScript<br>Bootstrap<br>jQuery</p>
 						</div>
@@ -84,7 +84,7 @@
 						<div class="col-md-4 col-6 mb-30 text-center">
 							<!-- Icon -->
 							<div class="piechart" data-color="#337AB7" data-trackcolor="rgba(0,0,0,0.04)" data-size="125" data-percent="90" data-width="2" data-animate="10000">
-								<I><%= image_tag "audio.png", class: "fa" %></i>
+								<I><%= image_tag "/images/widget_audio.png", class: "fa" %></i>
 							</div>
 							<p>Sound Design<br>Music Composing<br>Audio Processing<br>ProTools</p>
 						</div>
@@ -92,7 +92,7 @@
 						<div class="col-md-4 col-6 mb-30 text-center">
 							<!-- Icon -->
 							<div class="piechart" data-color="#337AB7" data-trackcolor="rgba(0,0,0,0.04)" data-size="130" data-percent="95" data-width="2" data-animate="10000">
-								<I><%= image_tag "comm.png", class: "fa" %></i>
+								<I><%= image_tag "/images/widget_handshake.png", class: "fa" %></i>
 							</div>
 							<p>Communication<br>Teamwork<br>Problem Solving</p>
 						</div>
@@ -100,7 +100,7 @@
 						<div class="col-md-4 col-6 mb-30 text-center">
 							<!-- Icon -->
 							<div class="piechart" data-color="#337AB7" data-trackcolor="rgba(0,0,0,0.04)" data-size="125" data-percent="80" data-width="2" data-animate="10000">
-								<I><%= image_tag "time.png", class: "fa" %></i>
+								<I><%= image_tag "/images/widget_time.png", class: "fa" %></i>
 							</div>
 							<p>Time Management<br>Working Under Pressure</p>
 						</div>
@@ -108,7 +108,7 @@
 						<div class="col-md-4 col-6 mb-30 text-center">
 							<!-- Icon -->
 							<div class="piechart" data-color="#337AB7" data-trackcolor="rgba(0,0,0,0.04)" data-size="125" data-percent="90" data-width="2" data-animate="10000">
-								<I><%= image_tag "adapt.png", class: "fa" %></i>
+								<I><%= image_tag "/images/widget_rocket.png", class: "fa" %></i>
 							</div>
 							<p>Adaptability<br>Willingness to Learn<br>New Technologies</p>
 						</div>
@@ -131,10 +131,10 @@
 
 					<ul class="nav nav-tabs nav-bottom-border inline-block mb-0">
 						<li class="nav-item">
-							<a class="active" href="#web" data-toggle="tab">WEB</a>
+							<a class="active" href="#music" data-toggle="tab">MUSIC</a>
 						</li>
 						<li class="nav-item">
-							<a href="#music" data-toggle="tab">MUSIC</a>
+							<a href="#web" data-toggle="tab">WEB DESIGN</a>
 						</li>
 						<li class="nav-item">
 							<a href="#photography" data-toggle="tab">PHOTOGRAPHY</a>
@@ -150,125 +150,9 @@
 				<div class="container">
 
 					<div class="tab-content">
-						
-
-						<!-- WEB -->
-						<div class="tab-pane active" id="web">
-
-							<div class="row">
-
-							<div>
-
-							<!-- THREE COLUMNS -->
-							<div class="row" style="margin: 30px">
-
-								<div class="col-md">
-
-									<!-- article item -->
-									<div class="item-box">
-										<figure>
-											<a class="item-hover" href="https://www.magicbusworld.com/" target="_blank">
-												<span class="overlay color2"></span>
-												<span class="inner">
-													<span class="block fa fa-plus fsize20"></span>
-													<strong>GO TO WEBSITE</strong> 
-												</span>
-											</a>
-											<%= image_tag "/images/magicbus.png", class: "img-fluid", width: "263", height: "147" %>
-										</figure>
-										<div class="item-box-desc">
-											<h4>MagicBus</h4>
-											<small>Social and booking website for a bus transformed into a hotel. 15k visits during the first month of launch.</small>
-											<br>
-											<%= link_to "Development Article", magicbus_path, style: "padding: 5px; border: solid 1px;" %>
-										</div>
-									</div>
-									<!-- /article item -->
-
-								</div>
-
-								<div class="col-md">
-
-									<!-- article item -->
-									<div class="item-box">
-										<figure>
-											<a class="item-hover" href="https://sehra.herokuapp.com/" target="_blank">
-												<span class="overlay color2"></span>
-												<span class="inner">
-													<span class="block fa fa-plus fsize20"></span>
-													<strong>GO TO WEBSITE</strong> 
-												</span>
-											</a>
-											<%= image_tag "sehra.png", class: "img-fluid", width: "263", height: "147" %>
-										</figure>
-										<div class="item-box-desc">
-											<h4>Sehra</h4>
-											<small>Personnal project to rehabilitate abandonned areas in France throughout a voting system.</small>
-										</div>
-									</div>
-									<!-- /article item -->
-
-								</div>
-
-
-								<div class="col-md">
-
-									<!-- article item -->
-									<div class="item-box">
-										<figure>
-											<a class="item-hover" href="https://catsforsale.herokuapp.com/" target="_blank">
-												<span class="overlay color2"></span>
-												<span class="inner">
-													<span class="block fa fa-plus fsize20"></span>
-													<strong>GO TO WEBSITE</strong>
-												</span>
-											</a>
-											<%= image_tag "cats.png", class: "img-fluid", width: "263", height: "147" %>
-										</figure>
-										<div class="item-box-desc">
-											<h4>Test Online Shop</h4>
-											<small>Test website with working carts, paiement systems, admin page and user accounts.</small>
-										</div>
-									</div>
-									<!-- /article item -->
-
-								</div>
-
-								<div class="col-md">
-
-									<!-- article item -->
-									<div class="item-box">
-										<figure>
-											<a class="item-hover" href="https://starwarsmailer.herokuapp.com/" target="_blank">
-												<span class="overlay color2"></span>
-												<span class="inner">
-													<span class="block fa fa-plus fsize20"></span>
-													<strong>GO TO WEBSITE</strong>
-												</span>
-											</a>
-											<%= image_tag "starwars.png", class: "img-fluid", width: "263", height: "147" %>
-										</figure>
-										<div class="item-box-desc">
-											<h4>Star Wars Mailer</h4>
-											<small>One page website to get familiar with AJAX in a Ruby on Rails environment.</small>
-										</div>
-									</div>
-									<!-- /article item -->
-
-								</div>
-
-								<!-- /article item -->
-							</div>
-							<!-- /THREE COLUMNS -->
-								</div>
-
-							</div>
-
-						</div>
-
 
 						<!-- MUSIC -->
-						<div class="tab-pane" id="music">
+						<div class="tab-pane active" id="music">
 
 							<div class="row" style="margin: 30px">
 								<div class="col-md-4">
@@ -297,45 +181,151 @@
 
 						</div>
 
+						<!-- WEB -->
+						<div class="tab-pane" id="web">
+
+							<div class="row">
+
+							<div>
+
+							<!-- THREE COLUMNS -->
+							<div class="row" style="margin: 30px">
+
+								<div class="col-md">
+
+									<!-- article item -->
+									<div class="item-box">
+										<figure>
+											<a class="item-hover" href="https://www.magicbusworld.com/" target="_blank">
+												<span class="overlay color2"></span>
+												<span class="inner">
+													<span class="block fa fa-plus fsize20"></span>
+													<strong>GO TO WEBSITE</strong> 
+												</span>
+											</a>
+											<%= image_tag "/images/projects_magicbus.png", class: "img-fluid", width: "263", height: "147" %>
+										</figure>
+										<div class="item-box-desc">
+											<h4>MagicBus</h4>
+											<small>Social and booking website for a bus transformed into a hotel. 15k visits during the first month of launch.</small>
+										</div>
+									</div>
+									<!-- /article item -->
+
+								</div>
+
+								<div class="col-md">
+
+									<!-- article item -->
+									<div class="item-box">
+										<figure>
+											<a class="item-hover" href="https://sehra.herokuapp.com/" target="_blank">
+												<span class="overlay color2"></span>
+												<span class="inner">
+													<span class="block fa fa-plus fsize20"></span>
+													<strong>GO TO WEBSITE</strong> 
+												</span>
+											</a>
+											<%= image_tag "/images/projects_sehra.png", class: "img-fluid", width: "263", height: "147" %>
+										</figure>
+										<div class="item-box-desc">
+											<h4>Sehra</h4>
+											<small>Personnal project to rehabilitate abandonned areas in France throughout a voting system.</small>
+										</div>
+									</div>
+									<!-- /article item -->
+
+								</div>
+
+
+								<div class="col-md">
+
+									<!-- article item -->
+									<div class="item-box">
+										<figure>
+											<a class="item-hover" href="https://catsforsale.herokuapp.com/" target="_blank">
+												<span class="overlay color2"></span>
+												<span class="inner">
+													<span class="block fa fa-plus fsize20"></span>
+													<strong>GO TO WEBSITE</strong>
+												</span>
+											</a>
+											<%= image_tag "/images/projects_cats.png", class: "img-fluid", width: "263", height: "147" %>
+										</figure>
+										<div class="item-box-desc">
+											<h4>Test Online Shop</h4>
+											<small>Test website with working carts, paiement systems, admin page and user accounts.</small>
+										</div>
+									</div>
+									<!-- /article item -->
+
+								</div>
+
+								<div class="col-md">
+
+									<!-- article item -->
+									<div class="item-box">
+										<figure>
+											<a class="item-hover" href="https://starwarsmailer.herokuapp.com/" target="_blank">
+												<span class="overlay color2"></span>
+												<span class="inner">
+													<span class="block fa fa-plus fsize20"></span>
+													<strong>GO TO WEBSITE</strong>
+												</span>
+											</a>
+											<%= image_tag "/images/projects_starwars.png", class: "img-fluid", width: "263", height: "147" %>
+										</figure>
+										<div class="item-box-desc">
+											<h4>Star Wars Mailer</h4>
+											<small>One page website to get familiar with AJAX in a Ruby on Rails environment.</small>
+										</div>
+									</div>
+									<!-- /article item -->
+
+								</div>
+
+								<!-- /article item -->
+							</div>
+							<!-- /THREE COLUMNS -->
+								</div>
+
+							</div>
+
+						</div>
 
 						<!-- PHOTO -->
 						<div class="tab-pane" id="photography">
 
-							<div style="text-align:center; font-size:20px; margin-bottom: 50px;">
-								<p style="font-size:9pt; margin-bottom: 15px;">You can also check out my</p>
-								<%= link_to "Strangers Photography Project", strangers_path, style: "padding: 10px; border: solid 1px;" %>
-							</div>
-
 							<div class="masonry-gallery columns-6 lightbox" data-plugin-options='{"delegate": "a", "gallery": {"enabled": true}}'>
 								<a class="image-hover" href="https://imageshack.com/a/img923/3165/L8Uhou.jpg">
-									<%= image_tag "photo1-big.jpg" %>
+									<%= image_tag "/images/photo_1.jpg" %>
 								</a>
 								<a class="image-hover" href="https://imageshack.com/a/img921/6025/6GbvyL.jpg">
-									<%= image_tag "photo2-big.jpg" %>
+									<%= image_tag "/images/photo_2.jpg" %>
 								</a>
 								<a class="image-hover" href="https://imageshack.com/a/img921/1797/nA94xs.jpg">
-									<%= image_tag "photo3-big.jpg" %>
+									<%= image_tag "/images/photo_3.jpg" %>
 								</a>
 								<a class="image-hover" href="https://imageshack.com/a/img922/451/rbYUrQ.jpg">
-									<%= image_tag "photo4-big.jpg" %>
+									<%= image_tag "/images/photo_4.jpg" %>
 								</a>
 								<a class="image-hover" href="https://imageshack.com/a/img922/7431/xkh9cP.jpg">
-									<%= image_tag "photo5-big.jpg" %>
+									<%= image_tag "/images/photo_5.jpg" %>
 								</a>												
 								<a class="image-hover" href="https://imageshack.com/a/img924/4125/gEoTaZ.jpg">
-									<%= image_tag "photo6-big.jpg" %>
+									<%= image_tag "/images/photo_6.jpg" %>
 								</a>
 								<a class="image-hover" href="https://imageshack.com/a/img924/5011/ngaK6B.jpg">
-									<%= image_tag "photo7-big.jpg" %>
+									<%= image_tag "/images/photo_7.jpg" %>
 								</a>
 								<a class="image-hover" href="https://imageshack.com/a/img921/7392/iQLpIy.jpg">
-									<%= image_tag "photo8-big.jpg" %>
+									<%= image_tag "/images/photo_8.jpg" %>
 								</a>
 								<a class="image-hover" href="https://imageshack.com/a/img921/2734/06kgNl.jpg">
-									<%= image_tag "photo10-big.jpg" %>
+									<%= image_tag "/images/photo_9.jpg" %>
 								</a>
 								<a class="image-hover" href="https://imageshack.com/a/img922/2482/Tu7rne.jpg">
-									<%= image_tag "photo11-big.jpg" %>
+									<%= image_tag "/images/photo_10.jpg" %>
 								</a>																																			
 							</div>
 
@@ -363,7 +353,7 @@
 													<strong>WATCH</strong> 
 												</span>
 											</a>
-											<%= image_tag "charly.png", class: "img-fluid", width: "263", height: "147" %>
+											<%= image_tag "/images/projects_charlie.png", class: "img-fluid", width: "263", height: "147" %>
 										</figure>
 										<div class="item-box-desc">
 											<h4>My Uncle Charly</h4>
@@ -388,7 +378,7 @@
 													<strong>WATCH</strong>
 												</span>
 											</a>
-											<%= image_tag "darknoir.png", class: "img-fluid", width: "263", height: "147" %>
+											<%= image_tag "/images/projects_darknoir.png", class: "img-fluid", width: "263", height: "147" %>
 										</figure>
 										<div class="item-box-desc">
 											<h4>Dark Noir</h4>
@@ -411,7 +401,7 @@
 													<strong>WATCH</strong>
 												</span>
 											</a>
-											<%= image_tag "fractal.png", class: "img-fluid", width: "263", height: "147" %>
+											<%= image_tag "/images/projects_fractal.png", class: "img-fluid", width: "263", height: "147" %>
 										</figure>
 										<div class="item-box-desc">
 											<h4>Fractal Space</h4>
@@ -435,7 +425,7 @@
 													<strong>WATCH</strong>
 												</span>
 											</a>
-											<%= image_tag "skate.png", class: "img-fluid", width: "263", height: "147" %>
+											<%= image_tag "/images/projects_skate.png", class: "img-fluid", width: "263", height: "147" %>
 										</figure>
 										<div class="item-box-desc">
 											<h4>Merci le skate!</h4>

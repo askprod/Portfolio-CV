@@ -1,7 +1,7 @@
 <div id="mainMenu" class="navbar-toggleable-md sidebar-vertical sidebar-dark">
 
 	<a href="/" class="logo text-center mb-0 mt-0 pt-15 pb-15 w-100p">
-		<%= image_tag "/images/profile-picture.png", class: "logo-xs-half", size: "200x200", alt: "" %>
+		<%= image_tag "/images/profile_picture.png", class: "logo-xs-half", size: "200x200", alt: "" %>
 	</a>
 
 	<div class="container">
@@ -21,17 +21,9 @@
 	<div class="sidebar-nav">
 		<div class="navbar navbar-default" role="navigation">
 
-			<div class="navbar-header">
-				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".sidebar-navbar-collapse">
-					<span class="sr-only">Toggle navigation</span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-				</button>
-			</div>
-
 			<div class="navbar-collapse sidebar-navbar-collapse collapse w-100p">
-				<% if @home_navbar %>
+				<% unless current_page?(root_url) %>
+
 				<ul class="nav navbar-nav nav-onepage">
 					<li>
 						<a href="/">
@@ -39,7 +31,19 @@
 						</a>
 					</li>
 				</ul>
+
+				<% unless current_page?(blog_url) %>
+					<ul class="nav navbar-nav nav-onepage">
+						<li>
+							<a href="/blog">
+								Back
+							</a>
+						</li>
+					</ul>
+				<% end %>
+
 				<% else %>
+
 				<ul class="nav navbar-nav nav-onepage">
 					<li class="active">
 						<a href="#about">
@@ -57,6 +61,7 @@
 						</a>
 					</li>
 				</ul>
+				
 				<% end %>
 			</div>
 			
@@ -64,15 +69,11 @@
 	</div>
 
 	<div class="social-icons hidden-md hidden-sm-down text-center">
-		<a href="https://www.linkedin.com/in/paul-trin-dinh-508537b9/" target="_blank" class="social-icon social-icon-sm social-icon-light social-linkedin" data-toggle="tooltip" data-placement="top" title="Linkedin">
-			<i class="icon-linkedin"></i>
-			<i class="icon-linkedin"></i>
+		<a href="https://www.youtube.com/channel/UCannubKEMZ5ANNN6s9atH-A" target="_blank" class="social-icon social-icon-sm social-icon-light social-youtube" data-toggle="tooltip" data-placement="top" title="YouTube">
+			<i class="icon-youtube"></i>
+			<i class="icon-youtube"></i>
 		</a>
-		<a href="https://github.com/askprod" target="_blank" class="social-icon social-icon-sm social-icon-light social" data-toggle="tooltip" data-placement="top" title="Github">
-			<i class="icon-github"></i>
-			<i class="icon-github"></i>
-		</a>
-		<a href="https://soundcloud.com/askprod" target="_blank" class="social-icon social-icon-sm social-icon-light social-soundcloud" data-toggle="tooltip" data-placement="top" title="Soundcloud">
+		<a href="https://soundcloud.com/askprod" target="_blank" class="social-icon social-icon-sm social-icon-light social-soundcloud" data-toggle="tooltip" data-placement="top" title="SoundCloud">
 			<i class="icon-soundcloud"></i>
 			<i class="icon-soundcloud"></i>
 		</a>
@@ -80,10 +81,34 @@
 			<i class="icon-instagram"></i>
 			<i class="icon-instagram"></i>
 		</a>
+		<a href="https://www.linkedin.com/in/paul-trin-dinh-508537b9/" target="_blank" class="social-icon social-icon-sm social-icon-light social-linkedin" data-toggle="tooltip" data-placement="top" title="LinkedIn">
+			<i class="icon-linkedin"></i>
+			<i class="icon-linkedin"></i>
+		</a>
+		<a href="https://github.com/askprod" target="_blank" class="social-icon social-icon-sm social-icon-light social" data-toggle="tooltip" data-placement="top" title="GitHub">
+			<i class="icon-github"></i>
+			<i class="icon-github"></i>
+		</a>
 		<a href="https://stackoverflow.com/users/12296411/askprod" target="_blank" class="social-icon social-icon-sm social-icon-light social-stackoverflow" data-toggle="tooltip" data-placement="top" title="StackOverflow">
 			<i class="icon-stackoverflow"></i>
 			<i class="icon-stackoverflow"></i>
 		</a>
 	</div>
+
+	<% if current_page?(root_url) %>
+	<div class="sidebar-nav">
+		<div class="navbar navbar-default" role="navigation">
+			<div class="navbar-collapse sidebar-navbar-collapse collapse w-100p">
+				<ul class="nav navbar-nav nav-onepage" style="margin-bottom: 20px;">
+					<li>
+						<a href="/blog">
+							Blog
+						</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<% end %>
 
 </div>
