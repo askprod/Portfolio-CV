@@ -3,10 +3,10 @@ class HomeController < ApplicationController
   end
 
   def englishcv
-    send_file 'public/documents/englishcv.pdf', type: 'application/pdf', :disposition => 'inline'
+    send_file 'public/pdf/cv_english.pdf', type: 'application/pdf', :disposition => 'inline'
   end
 
   def francaiscv
-    send_file 'public/documents/francaiscv.pdf', type: 'application/pdf', :disposition => 'inline'
+    send_file 'public/pdf/cv_french.pdf', type: 'application/pdf', :disposition => 'inline'
   end
 end

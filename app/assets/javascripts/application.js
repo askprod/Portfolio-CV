@@ -16,6 +16,6 @@
 //= require rails-ujs
 //= require_tree .
 
-var plugin_path = "./plugins/"
+var plugin_path = "../plugins/"
 
 

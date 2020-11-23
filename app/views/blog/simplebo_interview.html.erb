@@ -1,0 +1,208 @@
+<body class="smoothscroll enable-animation menu-vertical">
+
+	<div id="wrapper">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-10 offset-sm-1">
+					<div class="row">
+						<div class="container" style="margin: 80px 20px;">
+							<h1 class="text-center fs-30"><span>SIMPLEBO TECHNICAL INTERVIEW</span></h1>
+                            <h2 class="fs-20"><span>INTRODUCTION</span></h2>
+                            <p class="small mb-0">You can visit the app here:</p>
+                            <h2 class="fs-20"><span><a href="https://simplebotickets.herokuapp.com/" target="_blank">https://simplebotickets.herokuapp.com/</a></span></h2>
+                            <p>After sending an application for a job opening as a Rails Junior Developper at <a href="https://www.simplebo.fr/" target="_blank">Simplébo</a>, I was asked to create a simple ticketing type application as a technical test.</p>
+                            <p>The Github repository can be consulted <a href="https://github.com/grapstor/candidature-paul-trin-dinh", target="_blank">here</a>.</p>
+                            <h2 class="fs-20"><span>INSTRUCTIONS</span></h2>
+                            <p>The detailled instructions can be found <a href="https://github.com/grapstor/candidature-paul-trin-dinh/blob/master/PROJECT.md" target="_blank">here</a>.</p>
+                            <p>I imagine I'm working for a company for which client support is important. Therefore, the company needs a ticketing system. Fictionnal clients send tickets that are then assigned to users for them to proceed in fixing the issues.</p>
+                            <p>Users can add comments on tickets, and close them when done with the task.</p> 
+                            <p>For this project I used Rails 5, PostgreSQL 12, and it's all hosted on a free Heroku dyno.</p> 
+
+                            <h2 class="fs-20"><span>ORGANIZATION</span><span class="small"></span></h2>
+                            
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col">
+                                        <%= image_tag '/images/simplebo_trello.png', class:"img-fluid" %>
+                                    </div>
+                                    <div class="col">
+                                        <p class="fs-10">An important part of the time I spent in the first hour before starting to code was organizing my thoughts, and going through the instructions while taking notes.</p>
+                                        <p class="fs-10">I love the Trello website for doing so, and it helped me a lot with my thinking process throughout the development of the app.</p>
+                                        <p class="fs-10">After creating a lot of apps where I started coding straight away, I realized that taking the time to do this was really important and actually saved a lot of time down the line.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <p></p>
+
+                            <h2 class="fs-20"><span>MODELS</span></h2>
+                            
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col">
+                                        <%= image_tag '/images/simplebo_database.png', class:"img-fluid" %>
+                                    </div>
+                                    <div class="col">
+                                        <p style="margin-bottom: 0;">USERS</p>
+                                        <p class="fs-10 mb-0">has_many: tickets</p>
+                                        <p class="fs-10">has_many: comments</p>
+                                        <p class="mb-0">TICKETS</p>
+                                        <p class="fs-10 mb-0">belongs_to :user, counter_cache: true</p>
+                                        <p class="fs-10">has_many :comments, dependent: :destroy</p>
+                                        <p class="mb-0">COMMENTS</p>
+                                        <p class="fs-10 mb-0">belongs_to :ticket</p>
+                                        <p class="fs-10">belongs_to :user</p>
+                                        <p class="fs-10 mb-0">These model relations permit Users to have Tickets assigned to them (Tickets belong_to a User) and write Comments on Tickets.</p>
+                                        <p class="fs-10 mb-0">For Users I used the well known gem Devise, which avoids all the hastle of creating a complex login system.</p>
+                                        <p class="fs-10">Some users are ticket_managers, which is the equivalent of an admin. They are able to delete and close any ticket.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <p></p>
+
+                            <h2 class="fs-20"><span>TICKETS</span></h2>
+
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col">
+                                        <%= image_tag '/images/simplebo_tickets_index.png', class:"img-fluid" %>
+                                    </div>
+                                    <div class="col">
+                                        <p class="fs-10">When a user logs-in, he is directly redirected to the tickets_index page, which shows only tickets that are currently open.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col">
+                                        <%= image_tag '/images/simplebo_ticket.png', class:"img-fluid" %>
+                                    </div>
+                                    <div class="col">
+                                        <p></p>
+                                        <p class="fs-10">Each tickets is clearly described: we can see the id, title and description. We can also see who it was assigned to, when it was created and the number of comments it currently has.</p>
+                                        <p class="fs-10">When a Ticket is created, it is automatically assigned with a before_validation method, to the User who currently has the smallest number of them assigned. He will then be able to close it.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <p></p>
+
+                            <h2 class="fs-20"><span>COMMENTS</span></h2>
+
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col">
+                                        <%= image_tag '/images/simplebo_comments.png', class:"img-fluid" %>
+                                    </div>
+                                    <div class="col">
+                                        <p class="fs-10">When you click on a ticket on the index page, it renders this partial on top.</p>
+                                        <p class="fs-10">This partial gives more detailed information about the ticket, like the complete description, and includes the comments thread, sorted from most recent to oldest.</p>
+                                        <p class="fs-10">Everything here is handled in AJAX: when you submit your comment with the form at the bottom of the partial, it appears straight away in the thread.</p>
+                                        <p class="fs-10">This gives the user a more seamless experience. Note that there's also AJAX when you delete a comment. The number of comments on the ticket are also updated asynchronously, thanks to rails' remote: true and javascript responses in the controllers.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <p></p>
+                            
+                            <h2 class="fs-20"><span>TICKET GENERATION & CRON</span></h2>
+
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col">
+                                        <%= image_tag '/images/simplebo_api.png', class:"img-fluid" %>
+                                        <%= image_tag '/images/simplebo_cron_code.png', class:"img-fluid" %>
+                                        <%= image_tag '/images/simplebo_cron.png', class:"img-fluid" %>
+                                    </div>
+                                    <div class="col">
+                                        <p class="fs-10">I was also asked to generate a CRON that would randomly create tickets depending on a set of rules, since we don't have real clients to create tickets.</p>
+                                        <p class="fs-10">This job runs every 5 minutes, and depending on the time of the day, a ticket has a bigger chance to be generated or not. I've used Rails' built in tasks, and added a helper to free that file from long methods.</p>
+                                        <p class="fs-10">Since I'm hosting the website on a free Heroku dyno, I could not use a worker dyno to run the CRON.</p>
+                                        <p class="fs-10">By coding a small API that runs the task on a POST request I was able to make it work. Using CURL, I then make that request.</p>
+                                        <p class="fs-10">I also added an password parameter (not shown on the screeshot, obviously), present in my credentials file, to avoid anyone from sending that POST request.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <p></p>
+                            
+                            <h2 class="fs-20"><span>MAILER</span></h2>
+
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col">
+                                        <%= image_tag '/images/simplebo_emails.png', class:"img-fluid" %>
+                                        <%= image_tag '/images/simplebo_email_config.png', class:"img-fluid" %>
+                                    </div>
+                                    <div class="col">
+                                        <p class="fs-10">With Rails' built in ActionMailer, I added this functionnality. Using Gmail's SMTP and a new account, these emails are sent after the models are created.</p>
+                                        <p class="fs-10">When a ticket is assigned to a user, he will receive an email with a link to that ticket.</p>
+                                        <p class="fs-10">But since I wanted the ticket/show view to respond to Javascript, I had to create a controller method that takes a parameter to open the index page and then render the correct partial according to the ticket.</p>
+                                        <p class="fs-10">So instead of sending the user a link like simplebotickets.com/ticket/:id, I send them something like this: simplebotickets.com?ticket_show=:id.</p>
+                                        <p class="fs-10">Again, this is a choice I made for a better experience browsing the website.</p>
+                                        <p class="fs-10">Also, when a a user gets a comment from another user on one of his assigned tickets, he also receives an email.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <p></p>
+                            
+                            <h2 class="fs-20"><span>FRONT-END</span></h2>
+
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col">
+                                        <%= image_tag '/images/simplebo_front.png', class:"img-fluid" %>
+                                    </div>
+                                    <div class="col">
+                                        <p class="fs-10">For the front-end, I kept things quite simple.</p>
+                                        <p class="fs-10">I mainly used Bootstrap, and overrode it a little bit, with the application.scss file, so I could add color variables, for example.</p>
+                                        <p class="fs-10">With minimum Javascript and jQuery, I limited their use to basic animations.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <p></p>
+
+                            <h2 class="fs-20"><span>CHALLENGES</span></h2>
+
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col">
+                                        <%= image_tag '/images/simplebo_time_management.png', class:"img-fluid" %>
+                                    </div>
+                                    <div class="col">
+                                        <p class="fs-10">The thing that I found the most difficult was time management. I consider myself as a perfectionnist, so I consider this as a challenge to my personnality</p>
+                                        <p class="fs-10">Having one week to complete an app from scratch actually made me realize that I have to spend time on what is necessary. The task was ment to take between 4-12hours to complete. I found myself missing some features after reaching the 12 hour mark.</p>
+                                        <p class="fs-10">Writting down my thought process and learning how to organize before even coding was also a good training. I love diving into code before even thinking about what I'm supposed to do. The more projects I work on, the more I learn to change this habit.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col">
+                                        <%= image_tag '/images/simplebo_searchbar.png', class:"img-fluid" %>
+                                    </div>
+                                    <div class="col">
+                                        <p class="fs-10">I had to give up on changes that I would do, for example a client-side search bar, that I ended up leaving server-side, to focus more on important things, like making a good documentation on the README.</p>
+                                        <p class="fs-10">The CRON part was also interesting, usually working with SideKiq & Redis, this has taught me that there are usually plenty of options and ways to do something that I wouldn't have thought about.</p>
+                                        <p class="fs-10">And finally, creating a good documentation and how important it is when you send your code to someone else has been a good pratice as well.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <p></p>
+
+                            <p>This has overall been a great experience, and I feel like I've done my best to create an app that is both complete and has a good user experience, with the constraints that I was given.</p> 
+                            <p>A huge thanks to Simplébo and Jeremy for considering my profile for their job opening!</p> 
+
+                        </div>
+					</div>
+				</div>
+			</div>
+		</div>
+	<div>
+
+</body>
